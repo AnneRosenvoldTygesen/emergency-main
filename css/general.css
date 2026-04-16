@@ -6,7 +6,8 @@
 body {
   font-family: var(--font-family-sans);
   color: var(--color-text);
-  background-color: var(--color-bg);
+  /* background-color: var(--color-bg); */
+  background-color: #dee2d4;
 }
 header {
   height: min-content;
@@ -43,7 +44,8 @@ h1 {
 #register h1 {
   margin: 40px 0 20px 0;
   padding: 15px 30px;
-  background-color: var(--color-head-bg);
+  /* background-color: var(--color-head-bg); */
+  background-color: #85737c;
   font-size: var(--font-h2-size);
 }
 #instruction p {

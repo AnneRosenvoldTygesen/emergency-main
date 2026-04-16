@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/burger.css">
   <link rel="stylesheet" href="css/cards.css">
-  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/forms.css">
   <link rel="icon" type="image/png" href="img/fav.png">
   <title>Emergency Site</title>
 </head>
@@ -23,7 +23,7 @@
       </div>
       <ul class="menu">
         <li><a class="menuItem" href="instruction.html">Nærkontakt</a></li>
-        <li><a class="menuItem" href="register.html">Indberet</a></li>
+        <li><a class="menuItem" href="register.html">Rapportér dine oplevelser med 5C</a></li>
       </ul>
       <button class="burger">
         <span class="line"></span>
@@ -37,15 +37,210 @@
     <h1>INDBERET</h1>
     <section id="form-section">
       <article id="form-info">
-        <h2>Overskrift</h2>
-        <p>Tekst</p>
+        <h2>Undersøgelse om dine oplevelser med linje 5C?</h2>
+        <p>Vi ønsker at undersøge dine oplevelser med buslinje 5C. Vi håber du vil hjælpe os med at besvare nednestående
+          spørgsmål. På forhånd tak.</p>
       </article>
-      <form id="webform"></form>
+      <form id="webform">
+
+        <fieldset>
+          <legend>
+            <h3> Personlige oplysninger </h3>
+          </legend>
+
+          <div class="form-group">
+            <label for="fornavn">Fornavn</label>
+            <input type="text" id="fornavn" name="fornavn" required>
+            <p>Udfyld venligst her</p>
+          </div>
+
+          <div class="form-group">
+            <label for="efternavn">Efternavn</label>
+            <input type="text" id="efternavn" name="efternavn" required>
+            <p>Udfyld venligst her</p>
+          </div>
+        </fieldset>
+
+
+        <fieldset>
+
+          <legend>
+            <h3> Dit køn </h3>
+          </legend>
+
+          <div class="form-group">
+            <label for="kvinde">
+              <input type="radio" id="kvinde" name="køn">
+              Kvinde
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="mand">
+              <input type="radio" id="mand" name="køn">
+              Mand
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="andet">
+              <input type="radio" id="andet" name="køn">
+              Andet
+            </label>
+          </div>
+
+        </fieldset>
+
+
+        <fieldset>
+          <legend>
+            <h3> Din alder </h3>
+          </legend>
+
+          <div class="form-group">
+            <label for="under20">
+              <input type="radio" id="under20" name="alder">
+              Under 20 år
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="21_40aar">
+              <input type="radio" id="21_40aar" name="alder">
+              21-40 år
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="41_60aar">
+              <input type="radio" id="41_60aar" name="alder">
+              41-60 år
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="61_80aar">
+              <input type="radio" id="61_80aar" name="alder">
+              61-80 år
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="over80">
+              <input type="radio" id="over80" name="alder">
+              61-80 år
+            </label>
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+
+          <legend>
+            <h3> Hvad kendetegner dine ture med 5C? </h3>
+          </legend>
+
+          <div class="form-group">
+            <label for="kaos">
+              <input type="checkbox" id="kaos" name="kaos">
+              Kaos
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="kaerlighed">
+              <input type="checkbox" id="kaerlighed" name="kaerlighed">
+              Kærlighed
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="overfyldt">
+              <input type="checkbox" id="overfyldt" name="overfyldt">
+              Overfyldt
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="ingen_udfordringer">
+              <input type="checkbox" id="ingen_udfordringer" name="ingen_udfordringer">
+              Ingen udfordringer
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="underholdende">
+              <input type="checkbox" id="underholdende" name="underholdende">
+              Underholdende
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="fint_plads">
+              <input type="checkbox" id="fint_plads" name="fint_plads">
+              Fint med plads
+            </label>
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+
+          <legend>
+            <h3> Hvad gør du når 5C er for overfyldt? </h3>
+          </legend>
+
+          <div class="form-group">
+            <label for="venter">
+              <input type="checkbox" id="venter" name="venter">
+              Venter på den næste afgang
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="til_fods">
+              <input type="checkbox" id="til_fods" name="til_fods">
+              Tager turen til fods
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="moser_ind">
+              <input type="checkbox" id="moser_ind" name="moser_ind">
+              Moser mig ind alligevel
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="anden_mulighed">
+              <input type="checkbox" id="anden_mulighed" name="anden_mulighed">
+              Finder en anden mulighed
+            </label>
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <div class="form-group">
+            <label for="beskriv"> Beskriv kort din værste oplevelse med 5c </label>
+            <textarea id="beskriv" name="beskriv_oplevelse"></textarea>
+          </div>
+        </fieldset>
+
+
+        <button type="submit">Send dit svar</button>
+
+      </form>
     </section>
     <section id="form-summary">
       <h2>Summary</h2>
       <article>
         <p class="placeholder">Opsummering</p>
+        <p> Fornavn <span class="fornavn_output"> </span></p>
+        <p> Efternavn <span class="efternavn_output"> </span></p>
+        <p> Køn <span class="køn_output"> </span></p>
+        <p> Alder <span class="alder_output"> </span></p>
+        <p> Kendetegn <span class="kendetegn_output"> </span></p>
       </article>
     </section>
   </main>

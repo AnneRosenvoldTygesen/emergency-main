@@ -3,12 +3,16 @@
 }
 .info-graphic,
 .info-text {
-  background-color: var(--color-info-bg);
+  background-color: #85737c;
   padding: 20px 0;
 }
 .info-graphic {
   border-radius: 0;
   margin: 60px auto 80px auto;
+}
+
+.info-graphic svg {
+  width: 100%;
 }
 .info-text h2 {
   line-height: 3rem;
@@ -40,3 +44,113 @@
 .info-box:nth-of-type(2n) {
   background-color: var(--color-card-bg-inverted);
 }
+
+.hide {
+  visibility: hidden;
+}
+
+.fadeIn {
+  animation: 1.5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* 
+#Hotspothjerte {
+  animation: pulse 1.5s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  /* 50% {
+    transform: scale(0.9);
+  } */
+/* 100% {
+    transform: scale(1);
+  }
+} */
+#Hotspothjerte {
+  animation: heartbeat 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#Hotspotskridt {
+  animation: walk 1.5s ease-in-out infinite;
+}
+
+@keyframes walk {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-1px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-1px) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+#Hotspottid {
+  transform: none;
+}
+/* #Hotspottid { */
+/* animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+/* }
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
