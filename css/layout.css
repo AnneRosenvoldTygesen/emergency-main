@@ -5,16 +5,48 @@ body {
   min-height: 100vh;
   margin: 0 auto;
 }
-main {
+#instruction main,
+#register main {
   display: grid;
   row-gap: 1rem;
 }
-main > *:not(:first-child) {
+
+#instruction main > *:not(:first-child),
+#register main > *:not(:first-child) {
   margin: 0 1rem;
 }
-main {
-  grid-template-rows: min-content min-content 1fr min-content;
+
+/**** styling af min header ****/
+#logotype-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* LOGO I HEADER */
+#logotype-wrapper img {
+  width: 14vw;
+  height: auto;
+  margin-right: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.cta-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: auto; /* 👈 skubber hele blokken til højre */
+  margin-right: 30px;
+}
+
+/* main {
+  grid-template-rows: min-content min-content 1fr min-content;
+} */
+
 #instruction main {
   grid-template-rows: min-content min-content min-content 1fr min-content;
 }
@@ -36,9 +68,9 @@ footer nav {
   justify-content: space-between;
   align-items: center;
 }
-header nav > * {
+/* header nav > * {
   flex: 1;
-}
+} */
 nav ul {
   display: flex;
   justify-content: flex-end;
@@ -55,18 +87,504 @@ footer ul {
 
 /* LAYOUT FOR SECTIONS */
 
+/*** STYLING AF TOPBANNER PÅ FORSIDEN ****/
+
+.topbanner_fullwidth {
+  min-height: 250px;
+  width: 100%;
+  background-color: var(--color-topbanner-bg);
+  background-image: url("../img/vej.webp");
+  background-repeat: repeat-x;
+  background-position: center calc(100% - 20px);
+  background-size: auto 70px;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center; /* 👈 centrerer lodret*/
+  border-radius: 0;
+}
+
+/* .text_topbanner {
+  margin-inline: 28px;
+} */
+
+.text_topbanner {
+  display: flex;
+  flex-direction: column; /*👈 oven på hinanden*/
+  justify-content: center;
+  padding-left: 20px; /* lidt luft fra bussen */
+  margin-bottom: 80px; /* 👈 løfter teksten op over vejen */
+  /* 
+  transform: translateX(-20px); */
+}
+
+.text_topbanner h1 {
+  margin-bottom: 0;
+}
+
+.text_topbanner p {
+  margin-top: 1px;
+}
+
+#frontpage main {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+}
+
+/*** når man bruger > * betyder det at alle ting der som fx. herunder ligger i frontpage main skal lytte til det der er skrevet ****/
+#frontpage main > * {
+  grid-column: 2 / 3;
+}
+
+/* #frontpage .fullwidth {
+  background-color: red;
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+} */
+/* 
+#frontpage .fullwidth > * {
+  grid-column: 2 / 3;
+} */
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 👈 vigtigt */
+  gap: 20px;
+}
+
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+[popover] {
+  max-width: 600px;
+  margin: auto;
+  height: auto;
+}
+
 @media (width > 600px) {
   #instruction > main,
   #register > main {
     grid-template-columns: 5fr 3fr;
     grid-template-rows: auto auto 1fr auto;
-  }
 
-  .qr {
-    order: 1;
-  }
+    .qr {
+      order: 1;
+    }
 
-  h1 {
-    grid-column: 1 / -1;
+    h1 {
+      grid-column: 1 / -1;
+    }
   }
+}
+
+/* GENEREL STYLING AF FORSIDEN OG PLACERING AF ARTIKLER */
+.grid_2-1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+
+/* STYLING AF HØJRE SIDES ARTIKLER */
+.hoejre_section {
+  background-color: #493d44;
+}
+
+.breaking {
+  background-color: light-dark(#8f2019, #fdb074);
+}
+
+.popup_historie2 {
+  background-color: #85737c;
+}
+
+/* STYLING AF VENSTRE SIDES ARTIKLER */
+
+/* STYLING AF OVERLEVELSESGUIDE ARTIKEL */
+.overlevelses_intro {
+  background-color: #85737c;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.overlevelses_intro img {
+  padding-block: 15px;
+  padding-left: 15px;
+}
+
+.overskrift_overlevelse {
+  background-color: #f2a766;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.overskrift_overlevelse {
+  margin: 0;
+}
+.text_overlevelse {
+  padding: 0;
+  /* margin-left: 20px; */
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text_overlevelse p,
+.text_overlevelse .cta-btn {
+  padding-block: 10px;
+  padding-inline: 13px;
+}
+
+/* STYLING AF DEL DIN HISTORIE ARTIKEL */
+.delhistorie_intro {
+  background-color: #85737c;
+  padding: 0;
+  /* margin-top: 20px; */
+}
+
+.delhistorie_intro img {
+  padding-block: 15px;
+  padding-left: 15px;
+  width: 70%;
+  height: auto;
+}
+
+.overskrift_delhistorie {
+  background-color: #f2a766;
+  width: 100%;
+  padding: 10px 20px;
+  margin: 0;
+  /* box-sizing: border-box; */
+}
+
+.text_delhistorie {
+  padding: 0;
+  /* margin-left: 20px; */
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.text_delhistorie p,
+.text_delhistorie .cta-btn {
+  padding-block: 10px;
+  padding-inline: 13px;
+}
+
+/* button for begge artikler til venstre */
+.cta-btn {
+  align-self: center; /* 👈 centrerer i container */
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #f7f7f2;
+}
+
+/* STYLING AF HØJRE SIDES 3 ARTIKLER */
+
+.hoejre_section {
+  padding: 0;
+  margin-top: 20px;
+}
+
+/*STYLINGE AF BREAKING NEWS */
+
+.breaking {
+  background: #8f2019;
+  width: 100%;
+  margin: 0;
+  margin-top: 15px;
+  height: 30px;
+  display: flex;
+  justify-content: center; /* vandret */
+  align-items: center;
+}
+
+/* STYLING AF POPOUP HISTORIE 1 KOEDMARKED */
+
+.popup_historie1 {
+  margin-top: 20px;
+}
+
+.teasertekst_koedmarked {
+  padding: 0;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.popup_historie1 h3 {
+  text-align: center;
+}
+
+.popup_historie1 img {
+  padding-top: 10px;
+  padding-inline: 15px;
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn_koedmarked {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  margin-block: 10px;
+  color: #f7f7f2;
+  background-color: #f2a766;
+  border: none;
+  width: max-content;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+}
+
+/* STYLING AF POPOUP HISTORIE 2 KAOS LOVE */
+
+.popup_historie2 {
+  margin-top: 20px;
+  height: 415px;
+  /* margin-bottom: 20px; */
+}
+
+.popup_historie2 h3 {
+  text-align: center;
+  padding-top: 20px;
+  padding-inline: 10px;
+}
+
+.teasertekst_kaoslove {
+  padding: 0;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.popup_historie2 img {
+  padding-top: 10px;
+  padding-inline: 15px;
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn_kaoslove {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  margin-block: 10px;
+  color: #f7f7f2;
+  background-color: #f2a766;
+  border: none;
+  width: max-content;
+  border-radius: var(--border-radius);
+  /* margin-bottom: 20px; */
+}
+
+/* STYLING AF POPOUP HISTORIE 3 NINJA */
+
+.popup_historie3 {
+  margin-top: 20px;
+  /* margin-bottom: 20px; */
+}
+
+.popup_historie3 h3 {
+  text-align: center;
+  /* padding-top: 20px; */
+  padding-inline: 10px;
+}
+
+.teasertekst_ninja {
+  padding: 0;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.popup_historie3 img {
+  padding-top: 10px;
+  padding-inline: 15px;
+  border-radius: 15px;
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn_ninja {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  margin-block: 10px;
+  color: #f7f7f2;
+  background-color: #f2a766;
+  border: none;
+  width: max-content;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+}
+
+/* STYLING AF BUTTONS DER BEVÆGER SIG NÅR PILEN KØRER HENOVER DEM */
+
+.cta-btn {
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  background-color: #1976d2;
+}
+
+.btn_ninja,
+.btn_kaoslove,
+.btn_koedmarked {
+  transition: all 0.3s ease;
+}
+
+.btn_ninja:hover,
+.btn_kaoslove:hover,
+.btn_koedmarked:hover {
+  transform: translateY(-3px);
+  background-color: #1976d2;
+}
+
+/*STYLING AF DE 3 POPUP ARTIKLER NÅR DE ÅBNES */
+
+/* STYLING AF SELVE POPUP ARTIKEL 1 */
+
+#artikel1_popover {
+  background-color: #ddecd8;
+}
+
+.img_koedmarked {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  clip-path: inset(0 round 15px);
+}
+
+.popup1_h3 {
+  background-color: #8f2019;
+  color: #f7f7f2;
+  text-align: center;
+  height: 35px;
+  padding-inline: 15px;
+  display: flex;
+  justify-content: center; /* vandret */
+  align-items: center;
+}
+
+#artikel1_popover p {
+  padding-inline: 15px;
+}
+
+.btn1_luk {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  margin-block: 10px;
+  color: #f7f7f2;
+  background-color: #f2a766;
+  border: none;
+  width: max-content;
+  border-radius: var(--border-radius);
+}
+
+/* STYLING AF SELVE POPUP ARTIKEL 2 */
+
+#artikel2_popover {
+  background-color: #ddecd8;
+}
+
+.img_kaoslove {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.popup2_h3 {
+  background-color: #8f2019;
+  color: #f7f7f2;
+  text-align: center;
+
+  padding: 10px 15px; /* 👈 styr højden her i stedet */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup2_p {
+  text-align: center;
+}
+
+#artikel2_popover p {
+  padding-inline: 15px;
+}
+
+.btn2_luk {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  margin-block: 10px;
+  color: #f7f7f2;
+  background-color: #f2a766;
+  border: none;
+  width: max-content;
+  border-radius: var(--border-radius);
+}
+
+/* STYLING AF SELVE POPUP ARTIKEL 3 */
+
+#artikel3_popover {
+  background-color: #ddecd8;
+}
+
+.img_ninja {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.popup3_h3 {
+  background-color: #8f2019;
+  color: #f7f7f2;
+  text-align: center;
+
+  padding: 10px 15px; /* 👈 styr højden her i stedet */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup3_p {
+  text-align: center;
+}
+
+#artikel3_popover p {
+  padding-inline: 15px;
+}
+
+.btn3_luk {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  margin-block: 10px;
+  color: #f7f7f2;
+  background-color: #f2a766;
+  border: none;
+  width: max-content;
+  border-radius: var(--border-radius);
 }

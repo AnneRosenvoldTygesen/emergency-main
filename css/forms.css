@@ -1,23 +1,50 @@
+/*BAGGRUNDSFARVE PÅ HELE REGISTER SIDEN */
 body {
-  background-color: white;
+  background-color: var(--color-form-body);
 }
 
+/* BAGGRUNDSKASSE BAG FORMS */
 #webform {
-  background-color: var(--form-background-color);
+  background-color: light-dark(#dbc0ad, #8f2019);
+  color: light-dark(#493d44, #f7f7f2);
+}
+/* H1 OG BAGGRUNDSKASSE */
+#register h1 {
+  color: #f7f7f2;
+  font-size: 1rem;
+  background-color: light-dark(#1976d2, #e59a67);
 }
 
+/* FARVE PÅ ØVERST INTROTEKST */
+#form-info {
+  color: light-dark(#493d44, #f7f7f2);
+}
+
+/* ANGIVER HVOR LANGE INPUT FELTERNE FOR FOR OG EFTERNAVN SKAL VÆRE */
+input[type="text"] {
+  width: 300px; /* 👈 justér */
+}
+/* TEKST 'UDFYLD HER' */
+.udfyld_her {
+  font-size: 0.7rem;
+}
+
+/* BAGGRUNDSFARVE BAGVED FORM INTRO TEKSTEN ØVERST */
 #form-section,
 #form-summary {
-  background-color: var(--info-background-color);
-  padding: 0;
+  background-color: light-dark(#dbc0ad, #8f2019);
+  padding: 10px;
 }
+
+/* BAGGRUNDSFARVE SUMMERY */
 #form-summary h2 {
   line-height: 3rem;
   text-align: center;
-  background-color: var(--headline-bg-color-inverted);
-  color: var(--headline-color-inverted);
+  /* background-color: yellow; */
+  color: light-dark(#493d44, #f7f7f2);
   padding-top: 5px;
 }
+/* TEKST I SUMMERY DELEN */
 #form-summary h3 {
   font-size: 0.8rem;
   line-height: 0.8rem;
@@ -25,10 +52,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
 #form-summary > *:not(:first-child) {
   margin: 0 clamp(1rem, 10%, 7rem);
 }
 #form-summary p {
+  color: light-dark(#493d44, #f7f7f2);
   font-size: 0.8rem;
   line-height: 1.3;
   margin: 0 0 1.2rem 0;
@@ -51,23 +80,28 @@ label:has(input) {
   gap: 1rem;
 }
 
+/* STJERNEN FOR REQUIRED */
 .form-group:has(:required) {
   label::after {
     content: " *";
-    color: red;
+    color: #8f2019;
   }
+}
+
+.required {
+  color: #8f2019;
+  margin-left: 5px;
 }
 
 .form-group:has(:user-invalid) {
   input {
-    outline: 1px solid red;
-    border-color: red;
+    outline: 0.5px solid;
   }
 }
-.required-group legend::after {
+/* .required-group legend::after {
   content: " *";
-  color: red;
-}
+  color: yellow;
+} */
 
 legend::after label {
   display: block;
@@ -77,35 +111,100 @@ button,
 input,
 select,
 textarea {
-  font-family: monospace;
+  font-family: var(--font-family-sans);
   font-size: 1rem;
+  background-color: #f7f7f2;
 }
 
+/* STYLING AF RADIO CIRKLERNE */
 input[type="radio"] {
-  accent-color: red;
-  /* appearance: none; */
-  border: 1px solid red;
-  color: red;
-  background: red;
-  /* width: 20px;
-  height: 20px; */
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #493d44;
+  border-radius: 50%;
+  display: inline-grid;
+  place-content: center;
 }
+
+input[type="radio"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: light-dark(#1976d2, #e59a67);
+  transform: scale(0);
+  transition: 0.2s;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+/* STYLING AF CHECKBOS FIRKANTERNE */
+input[type="checkbox"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #493d44;
+  border-radius: 4px; /* 👈 firkant */
+  display: inline-grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: light-dark(#1976d2, #e59a67);
+  transform: scale(0);
+  transition: 0.2s;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+/* input[type="radio"] {
+  accent-color: light-dark(#1976d2, #e59a67);
+  border: 1px solid #493d44;
+  color:;
+  background: light-dark(#1976d2, #e59a67);
+} */
 
 input {
-  border: 1px solid red;
+  border: 1px solid;
   border-radius: 10px;
   padding: 2px;
-  box-shadow: 1px 1px 2px rgba(51, 102, 255, 1);
+  color: #493d44;
+  /* box-shadow: 1px 1px 2px rgba(51, 102, 255, 1); */
 }
-button {
-  background-color: blue;
-  color: white;
-  border: 1px solid red;
-  border-radius: 10px;
-  padding: 10px;
+.btn_sendditsvar {
+  background-color: light-dark(#1976d2, #e59a67);
+  color: #f7f7f2;
+  border: none;
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  padding: 0.4rem 1rem;
+  margin-bottom: 20px;
+  width: max-content;
+  border-radius: var(--border-radius);
 }
 
 .error-message {
-  color: blue;
+  color: #8f2019;
+}
+
+/* ANGIVER BAGGRUNDSFARVEN BAG BÅDE FORM OG ØVERSTE INTRO TEKST*/
+#form-section {
+  background-color: light-dark(#dbc0ad, #8f2019);
+
+  .btn_sendditsvar {
+    transition: all 0.3s ease;
+  }
+
+  .btn_sendditsvar:hover {
+    transform: translateY(-3px);
+    background-color: light-dark(#8f2019, #1976d2);
+  }
 }

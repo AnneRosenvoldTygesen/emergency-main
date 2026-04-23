@@ -1,7 +1,17 @@
 @font-face {
   font-family: "Rubik";
-  src: url("../fonts/Rubik-VariableFont_wght.woff2") format("woff2-variations"),
+  src:
+    url("../fonts/Rubik-VariableFont_wght.woff2") format("woff2-variations"),
     url("/fonts/Rubik-Regular.woff") format("woff");
   font-weight: 200 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nervousregular";
+  src:
+    url("../fonts/nervous-webfont.woff2") format("woff2"),
+    url("../fonts/nervous-webfont.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
 }

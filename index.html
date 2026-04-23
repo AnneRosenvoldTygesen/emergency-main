@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/burger.css">
   <link rel="stylesheet" href="css/cards.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Underdog&display=swap"
+    rel="stylesheet">
   <link rel="icon" type="image/png" href="img/fav.png">
   <title>Emergency Site</title>
 </head>
@@ -18,21 +21,296 @@
   <header>
     <nav>
       <div id="logotype-wrapper" class="logo">
-        <a href="index.html"> LOGO-TYPE </a>
+        <a href="index.html"> <img src="img/burgerlogo.webp" alt="burgerlogo"> </a>
       </div>
-      <ul class="menu">
-        <li><a class="menuItem" href="instruction.html">Nærkontakt</a></li>
-        <li><a class="menuItem" href="register.html">Indberet</a></li>
-      </ul>
+      <div class="cta-wrapper">
+        <button id="darkmode-btn">Dark mode</button>
+
+        <a class="cta-btn" href="instruction.html">Din overlevelsesguide</a>
+        <a class="cta-btn" href="register.html">Del din historie</a>
+      </div>
+
       <button class="burger">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
       </button>
+
     </nav>
   </header>
 
   <main>
+    <section class="topbanner_fullwidth">
+      <img src="img/bus_solo.webp" alt="bussen" class="bussen">
+      <div class="text_topbanner">
+        <h1>VELKOMMEN I LINJE 5C</h1>
+        <p>Her bliver kaos & kærlighed til historier og overlevelsesguide til en nødvendighed.</p>
+      </div>
+    </section>
+
+
+
+
+
+
+    <section class="grid_2-1">
+
+      <section class="venstre_section">
+
+        <section class="overlevelses_intro">
+          <div class="grid_1-1">
+            <img src="img/forsidebusmedalt.webp" alt="forsidebusmedlogo">
+            <div class="text_overlevelse">
+              <h3 class="overskrift_overlevelse">DIN ULTIMATIVE OVERLEVELSESGUIDE TIL 5C</h3>
+              <p>Dørene åbner. Kaosset rammer.
+                Tre overlevelsesstrategier – én beslutning. Tør du gå med?
+                <br>
+                Vi har lavet et guide til hvordan du kan håndtere køreturerne med linje 5C.
+              </p>
+              <a href="instruction.html" class="cta-btn"> Læs mere </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="delhistorie_intro">
+          <div class="grid_1-1">
+            <img src="img/din_historie.webp" alt="del din historie">
+            <div class="text_delhistorie">
+              <h3 class="overskrift_delhistorie">DEL DIN HISTORIE FRA
+                DET VIRKELIGE LIV I 5C</h3>
+              <p>Det virkelige liv i 5C er vildere end du kan forestille dig.
+                Del din historie med os.</p>
+              <a href="register.html" class="cta-btn"> Del din historie</a>
+
+            </div>
+          </div>
+        </section>
+
+
+      </section>
+
+
+      <section class="hoejre_section">
+
+        <h2 class="breaking">BREAKING NEWS</h2>
+
+
+        <article class="popup_historie1">
+          <h3>KØDMARKED PÅ HJUL
+            FØRTE TIL DØDSFALD</h3>
+          <p class="teasertekst_koedmarked">Endnu en overfyldt buslinje 5C resulterede i en kritisk hændelse i
+            myldretiden, hvor én person blev mast og
+            afgik ved
+            døden.</p>
+          <img src="img/koedmarked.webp" alt="koedmarked på hjul">
+          <button popovertarget="artikel1_popover" class="btn_koedmarked">Læs mere</button>
+          <div id="artikel1_popover" popover>
+            <h3 class="popup1_h3">KØDMARKED PÅ HJUL
+              FØRTE TIL DØDSFALD</h3>
+            <br>
+            <p>
+              Endnu en overfyldt buslinje 5C resulterede i en kritisk hændelse i myldretiden, hvor én person blev mast
+              og afgik ved døden.
+            </p>
+            <img src="img/koedmarked.webp" alt="koedmarked paa hjul" class="img_koedmarked">
+            <p>
+              <br>
+              Overfyldning på buslinje 5C resulterede i kritisk hændelse i myldretiden. <br>
+
+              En alvorlig hændelse fandt sted på buslinje 5C i myldretiden, hvor en overfyldt bus førte til, at en
+              passager afgik ved
+              døden. Episoden sætter fokus på kapacitetsudfordringer og sikkerhedsforhold i den kollektive transport,
+              særligt på
+              stærkt belastede ruter.
+              <br><br>
+              Ifølge tilgængelige oplysninger var bussen fyldt til maksimal kapacitet allerede inden hændelsen. Flere
+              passagerer steg
+              dog på undervejs, hvilket resulterede i en situation med betydelig trængsel og begrænset bevægelsesfrihed
+              for de
+              ombordværende.
+              <br><br>
+              Under en opbremsning kombineret med et sving mistede flere passagerer balancen samtidig. Den efterfølgende
+              bevægelse i
+              passagergruppen udviklede sig til en kædereaktion, hvor personer blev presset ind i hinanden. I denne
+              situation blev en
+              passager fanget i den nederste del af mængden.
+              <br><br>
+              Vidneudsagn peger på, at det var vanskeligt for medpassagerer at reagere eller skabe plads til at afhjælpe
+              situationen,
+              da den generelle trængsel begrænsede både udsyn og bevægelsesmuligheder. Først efter at bussen standsede,
+              og
+              passagertrykket blev reduceret, blev hændelsens alvor fuldt erkendt.
+              <br><br>
+              Buslinje 5C er blandt de mest benyttede ruter og er i daglig tale ofte omtalt som et “kødmarked”, hvilket
+              afspejler de
+              oplevede forhold med høj passagertæthed. Hændelsen rejser spørgsmål om, hvorvidt den nuværende kapacitet
+              og håndtering
+              af passagerflow er tilstrækkelig i perioder med høj belastning.
+              <br><br>
+              Samtidig peger hændelsen på en adfærdsmæssig dimension, hvor passagerer gentagne gange vælger at stige på
+              trods af
+              synlig overfyldning. Denne praksis kan i kombination med fysiske begrænsninger øge risikoen for farlige
+              situationer ved
+              pludselige bevægelser i bussen.
+              <br><br>
+              Der er på nuværende tidspunkt ikke offentliggjort yderligere oplysninger om hændelsesforløbet eller
+              eventuelle tiltag
+              som følge heraf.
+              <br><br>
+              Hændelsen understreger behovet for øget opmærksomhed på sikkerhed i overfyldte transportmidler samt en
+              vurdering af
+              kapacitet og passagerhåndtering på særligt belastede ruter som buslinje 5C.
+              <br><br>
+            </p>
+
+            <button popovertarget="artikel1_popover" class="btn1_luk">Luk artikel</button>
+          </div>
+        </article>
+
+
+
+        <article class="popup_historie2">
+          <h3>FRA KAOS TIL KÆRLIGHED I 5C - EN HISTOPRIE FRA DET VIRKELIGE LIV.</h3>
+
+          <p class="teasertekst_kaoslove"> De var tæt på at rive hovedet af hinanden – men det endte med amore i luften.
+          </p>
+          <img src="img/kaos_love.webp" alt="hate and love">
+          <button popovertarget="artikel2_popover" class="btn_kaoslove"> Læs mere </button>
+          <div id="artikel2_popover" popover>
+
+            <h3 class="popup2_h3">FRA KAOS TIL KÆRLIGHED I 5C</h3>
+            <br>
+            <p class="popup2_p">
+              De var tæt på at rive hovedet af hinanden – men det endte med amore i luften.
+            </p>
+            <img src="img/kaos_love.webp" alt="hate and love" class="img_kaoslove">
+
+            <p>
+              En morgen der gik galt. <br>
+              Det begyndte som en helt almindelig morgen på 5C. Bussen var allerede fyldt, før dørene åbnede, men folk
+              pressede sig
+              ind alligevel. Stemningen var tung, og passagererne stod skulder mod skulder i jagten på bare lidt
+              plads.
+              Midt i trængslen opstod der en konflikt mellem to passagerer. En albue ramte hårdt, blikke blev skarpe,
+              og
+              ordene endnu
+              skarpere. Situationen var hurtigt ved at eskalere.
+              <br><br>
+              Da kaosset ramte. <br>
+              Pludselig bremsede bussen hårdt og tog et skarpt sving. Passagererne mistede balancen og væltede ind i
+              hinanden i en voldsom kædereaktion.
+              De to blev kastet direkte ind i hinanden, stødte hovederne sammen, og en sprækket læbe satte smag af
+              blod
+              på situationen. Presset fra mængden gjorde det umuligt at slippe væk, og de måtte gribe fat i hinanden
+              for
+              ikke at falde.
+              <br><br>
+              Fra konflikt til forbindelse. <br>
+              Midt i kaosset ændrede noget sig. Spændingen brast, og et grin slap ud. Det, der før var ved at udvikle
+              sig til en
+              konflikt, blev pludselig absurd.
+              Da bussen stoppede, undskyldte de til hinanden. Samtalen fortsatte udenfor, og kort efter blev der
+              udvekslet
+              telefonnumre og aftalt en kaffe.
+              Det, der begyndte som kaos og konflikt, endte som starten på en kærlighedshistorie.
+              <br><br>
+              Har du en historie?<br>
+              Har du en intens, dramatisk eller smuk historie fra din tur i 5C?
+              Så del den gerne med os under “Rapportér”.
+              <br><br>
+            </p>
+            <button popovertarget="artikel2_popover" class="btn2_luk">Luk artikel</button>
+          </div>
+        </article>
+
+
+
+        <article class="popup_historie3">
+          <h3>JOBOPSLAG: <br>
+            ER DU DEN NINJA VI MANGLER TIL 5C?</h3>
+          <p class="teasertekst_ninja">Movia tager drastiske midler i brug og aktiverer ninja-kontrollører ved dørene i
+            5C, efter dødsfald.</p>
+          <img src="img/ninja.webp" alt="ninja_jobopslag">
+          <button popovertarget="artikel3_popover" class="btn_ninja">Læs mere</button>
+          <div id="artikel3_popover" popover>
+            <h3 class="popup3_h3">JOBOPSLAG: <br>
+              Er du den ninja vi mangler til linje 5C?</h3>
+            <br>
+            <p>Movia tager drastiske midler i brug og aktiverer ninja-kontrollører ved dørene i 5C, efter dødsfald.</p>
+
+            <img src="img/ninja.webp" alt="ninja_jopslag" class="img_ninja">
+            <p>
+              <br>
+              Er du den ninja vi mangler?
+              <br>
+              <br>
+              En overfyldt bus på linje 5C udviklede sig for nylig til en fatal hændelse, da en opbremsning fik
+              passagerer til at
+              vælte ind over hinanden. Midt i det tætpakkede kaos blev en person trampet ihjel, før nogen kunne nå at
+              reagere.
+              <br>
+              <br>
+              Hændelsen har tvunget Movia til at tænke i nye baner. Ikke bare små justeringer, men en løsning, der kan
+              håndtere en
+              virkelighed, hvor “der er altid lige plads til én mere” ikke længere holder.
+              Derfor indfører Movia nu et usædvanligt tiltag: Ninjaer skal fremover hjælpe med at kontrollere
+              passagerflowet på 5C.
+              <br>
+              <br>
+              Er du vores næste ninja?
+              <br>
+              Movia søger en særlig type medarbejder til en særlig opgave. Du skal kunne bevare roen i situationer,
+              hvor
+              pladsen er
+              forsvundet, og hvor presset stiger for hvert stop. Du skal kunne aflæse, hvornår bussen er fyldt, og
+              have
+              modet til at
+              sige stop – også når flere forsøger at mase sig ind.
+              <br>
+              <br>
+              Som 5C-ninja vil din opgave være at skabe overblik i kaos. Du skal kunne bevæge dig gennem tætpakkede
+              menneskemængder,
+              dæmpe konflikter, og håndtere de spidse albuer, der opstår, når morgentravlhed møder begrænset plads.
+              Det
+              kræver både
+              fysisk og mentalt overskud – og en evne til at reagere hurtigt, når situationer opstår.
+              <br>
+              <br>
+              Hvem er du?
+              <br>
+              Vi forestiller os, at du har et skarpt overblik og hurtige reflekser. Du er ikke bange for tæt kontakt
+              og
+              kan bevare
+              roen, selv når omgivelserne er pressede. Erfaring med kampsport eller lignende er en fordel, men
+              vigtigst
+              er, at du kan
+              navigere i kaos og tage ansvar, når det gælder.
+              <br>
+              <br>
+              En hverdag ud over det sædvanlige
+              <br>
+              Arbejdet foregår i myldretiden, hvor tempoet er højt, og situationerne hurtigt kan ændre sig. Du vil
+              opleve mennesker på
+              deres mest utålmodige – og på deres mest kreative, når det gælder om at få plads.
+              Til gengæld får du en rolle, hvor du kan gøre en reel forskel. Ikke bare for flowet i bussen, men for
+              sikkerheden. Movia kalder det et nyt tiltag. Vi kalder det nødvendigt.
+              <br>
+              <br>
+              Hvis du mener, at du har det, der skal til for at holde kaos i skak i linje 5C, så ansøg nu.
+              <br><br>
+              Alle kvalificerede, uanset alder, køn, religion eller etnisk tilhørsforhold, opfordres til at søge.
+              <br><br>
+            </p>
+            <button popovertarget="artikel3_popover" class="btn3_luk">Luk artikel</button>
+
+
+          </div>
+        </article>
+      </section>
+
+
+    </section>
+
 
   </main>
 
@@ -58,6 +336,7 @@
       </ul>
     </nav>
   </footer>
+  <script src="js/darkmode.js"></script>
 </body>
 
 </html>

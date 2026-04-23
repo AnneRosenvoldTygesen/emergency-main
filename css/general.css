@@ -3,17 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   font-family: var(--font-family-sans);
   color: var(--color-text);
-  /* background-color: var(--color-bg); */
-  background-color: #dee2d4;
+  background-color: var(--color-bg);
+  max-width: 2560px;
+  margin: 0 auto; /* centrerer hele siden */
 }
+
 header {
   height: min-content;
   background-color: var(--color-head-bg);
 }
-#main-disclamer {
+/* #main-disclaimer {
   height: 225px;
   background-color: var(--color-head-bg);
   display: flex;
@@ -22,11 +31,11 @@ header {
   padding-left: 2rem;
   padding-bottom: 2%;
   margin-bottom: var(--margin-head-bottom);
-}
-#main-disclamer-content {
+} */
+/* #main-disclaimer-content {
   display: flex;
   column-gap: 1rem;
-}
+} */
 main section {
   padding: 20px;
   border-radius: var(--border-radius);
@@ -34,9 +43,9 @@ main section {
 h1 {
   font-size: var(--font-h1-size);
   font-weight: var(--font-weight-bold);
-  color: var(--color-text-inverted);
+
   margin: 5px 0;
-  line-height: 1.3rem;
+  line-height: 1rem;
   text-align: left;
 }
 
@@ -44,10 +53,19 @@ h1 {
 #register h1 {
   margin: 40px 0 20px 0;
   padding: 15px 30px;
-  /* background-color: var(--color-head-bg); */
-  background-color: #85737c;
+  background-color: var(--color-head-bg);
+  /* background-color: #85737c; */
+  color: var(--color-text-inverted);
   font-size: var(--font-h2-size);
 }
+
+#frontpage h1 {
+  font-size: 2.5rem;
+  margin-block: 0rem 1rem;
+  text-align: start;
+  margin-inline: 10px;
+}
+
 #instruction p {
   grid-column: 1/-1;
   margin-bottom: 20px;
@@ -68,28 +86,81 @@ h3 {
 main > h1 {
   width: calc(80% - 6rem);
 }
+
+/* effekt på bussen i banner på forsiden */
+.bussen {
+  animation: effect ease-out both;
+  animation-timeline: scroll();
+  animation-range: 0% 10%;
+}
+
+@keyframes effect {
+  from {
+    translate: 0vw;
+  }
+  to {
+    translate: 100vw;
+  }
+}
+/* 
+#frontpage h2 {
+  font-size: 2rem;
+  animation: effect ease-out both 2s;
+  animation-timeline: scroll();
+  animation-range: 0 35%;
+}
+
+@keyframes effect {
+  from {
+    translate: -30vw;
+  }
+} */
+
 /* NAVIGATION STRUCTURES */
+
+/***Baggrundsfarve under knapper i header***/
 header > nav {
   height: 100%;
   background-color: var(--color-menu-bg);
 }
+
 nav ul {
   list-style: none;
 }
+/****Tekstfont inde i knapperne****/
 a {
   font-family: var(--font-family-sans);
 }
+
+/****tekstfarve inde i knapperne i header****/
 nav a {
   text-decoration: none;
   color: var(--color-text);
 }
+
+.cta-btn {
+  background-color: #fdb074;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#darkmode-btn {
+  font: var(--font-family-sans);
+  background-color: light-dark(#8f2019, #1976d2);
+  color: #f7f7f2;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  margin-right: 50px;
+}
+
 /* Måske skal du lave en ny regel for logotype-wrapper, når du har lavet din logotype */
 #logotype-wrapper {
   background-color: var(--color-logotype-bg);
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 3.6rem;
+  height: 5rem;
 }
 #logotype-wrapper > a {
   color: var(--color-text-logotype);
@@ -102,15 +173,16 @@ nav a {
 header nav li a {
   margin: 1.5rem;
   background-color: var(--color-link-bg);
-  color: var(--color-text);
+  color: yellow;
   font-size: var(--followup-text-size);
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius-links);
 }
 /* Pilen efter menu-tekst */
-header > nav li > a:after {
+/* header > nav li > a:after {
   content: " \2192";
-}
+} */
+
 /* Global menu hover effekt - Lav den om til det, du synes */
 nav a:hover {
   background-color: var(--color-link-hover);

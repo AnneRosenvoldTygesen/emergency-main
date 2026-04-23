@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="css/burger.css">
   <link rel="stylesheet" href="css/cards.css">
   <link rel="stylesheet" href="css/forms.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Underdog&display=swap"
+    rel="stylesheet">
   <link rel="icon" type="image/png" href="img/fav.png">
   <title>Emergency Site</title>
 </head>
@@ -19,27 +24,34 @@
   <header>
     <nav>
       <div id="logotype-wrapper" class="logo">
-        <a href="index.html"> LOGO-TYPE </a>
+        <a href="index.html"> <img src="img/burgerlogo.webp" alt="burgerlogo"> </a>
       </div>
-      <ul class="menu">
-        <li><a class="menuItem" href="instruction.html">Nærkontakt</a></li>
-        <li><a class="menuItem" href="register.html">Rapportér dine oplevelser med 5C</a></li>
-      </ul>
+      <div class="cta-wrapper">
+        <button id="darkmode-btn">Dark mode</button>
+
+        <a class="cta-btn" href="instruction.html">Din overlevelsesguide</a>
+        <a class="cta-btn" href="register.html">Del din historie</a>
+      </div>
+
       <button class="burger">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
       </button>
+
     </nav>
   </header>
 
   <main>
-    <h1>INDBERET</h1>
+
+    <h1 class="h1_form">DEL DIN HISTORIE FRA 5C MED OS</h1>
     <section id="form-section">
       <article id="form-info">
-        <h2>Undersøgelse om dine oplevelser med linje 5C?</h2>
-        <p>Vi ønsker at undersøge dine oplevelser med buslinje 5C. Vi håber du vil hjælpe os med at besvare nednestående
-          spørgsmål. På forhånd tak.</p>
+        <h2>Undersøgelse om dine oplevelser i linje 5C</h2>
+        <br>
+        <p>Vi ønsker at kende til dine historier fra 5C. Om de er gode eller dårlige, om det er kaos eller kærlighed,
+          så
+          tvivl ikke med at dele din historie med os. På forhånd tak.</p><br><br>
       </article>
       <form id="webform">
 
@@ -50,84 +62,54 @@
 
           <div class="form-group">
             <label for="fornavn">Fornavn</label>
-            <input type="text" id="fornavn" name="fornavn" required>
-            <p>Udfyld venligst her</p>
+            <input type="text" id="fornavn" name="fornavn" required">
+            <p class="udfyld_her">Udfyld venligst her</p>
           </div>
 
           <div class="form-group">
             <label for="efternavn">Efternavn</label>
             <input type="text" id="efternavn" name="efternavn" required>
-            <p>Udfyld venligst her</p>
+            <p class="udfyld_her">Udfyld venligst her</p>
           </div>
         </fieldset>
-
 
         <fieldset>
 
           <legend>
-            <h3> Dit køn </h3>
-          </legend>
-
-          <div class="form-group">
-            <label for="kvinde">
-              <input type="radio" id="kvinde" name="køn">
-              Kvinde
-            </label>
-          </div>
-
-          <div class="form-group">
-            <label for="mand">
-              <input type="radio" id="mand" name="køn">
-              Mand
-            </label>
-          </div>
-
-          <div class="form-group">
-            <label for="andet">
-              <input type="radio" id="andet" name="køn">
-              Andet
-            </label>
-          </div>
-
-        </fieldset>
-
-
-        <fieldset>
-          <legend>
-            <h3> Din alder </h3>
+            <h3>Din alder <span class="required">*</span></h3>
           </legend>
 
           <div class="form-group">
             <label for="under20">
-              <input type="radio" id="under20" name="alder">
+              <input type="radio" id="under20" value="Under 20 år" name="alder">
               Under 20 år
             </label>
           </div>
 
           <div class="form-group">
             <label for="21_40aar">
-              <input type="radio" id="21_40aar" name="alder">
+              <input type="radio" id="21_40aar" value="21-40 år" name="alder">
               21-40 år
             </label>
           </div>
 
           <div class="form-group">
             <label for="41_60aar">
-              <input type="radio" id="41_60aar" name="alder">
+              <input type="radio" id="41_60aar" value="41_60 år" name="alder">
               41-60 år
             </label>
           </div>
 
           <div class="form-group">
             <label for="61_80aar">
-              <input type="radio" id="61_80aar" name="alder">
+              <input type="radio" id="61_80aar" value="61_80 år" name="alder">
               61-80 år
             </label>
           </div>
 
           <div class="form-group">
             <label for="over80">
-              <input type="radio" id="over80" name="alder">
+              <input type="radio" id="over80" value="Over 80 år" name="alder">
               61-80 år
             </label>
           </div>
@@ -135,100 +117,68 @@
         </fieldset>
 
         <fieldset>
-
           <legend>
-            <h3> Hvad kendetegner dine ture med 5C? </h3>
+            <h3>Hvad kendetegner dine ture med 5C? <span class="required">*</span></h3>
           </legend>
+
 
           <div class="form-group">
             <label for="kaos">
-              <input type="checkbox" id="kaos" name="kaos">
+              <input type="checkbox" id="kaos" value="kaos" name="kendetegn">
               Kaos
             </label>
           </div>
 
           <div class="form-group">
             <label for="kaerlighed">
-              <input type="checkbox" id="kaerlighed" name="kaerlighed">
+              <input type="checkbox" id="kaerlighed" value="kaerlighed" name="kendetegn">
               Kærlighed
             </label>
           </div>
 
           <div class="form-group">
             <label for="overfyldt">
-              <input type="checkbox" id="overfyldt" name="overfyldt">
+              <input type="checkbox" id="overfyldt" value="overfyldt" name="kendetegn">
               Overfyldt
             </label>
           </div>
 
           <div class="form-group">
             <label for="ingen_udfordringer">
-              <input type="checkbox" id="ingen_udfordringer" name="ingen_udfordringer">
+              <input type="checkbox" id="ingen_udfordringer" value="ingen_udfordringer" name="kendetegn">
               Ingen udfordringer
             </label>
           </div>
 
           <div class="form-group">
             <label for="underholdende">
-              <input type="checkbox" id="underholdende" name="underholdende">
+              <input type="checkbox" id="underholdende" value="underholdende" name="kendetegn">
               Underholdende
             </label>
           </div>
 
           <div class="form-group">
             <label for="fint_plads">
-              <input type="checkbox" id="fint_plads" name="fint_plads">
-              Fint med plads
+              <input type="checkbox" id="fint_plads" value="fint_plads" name="kendetegn">
+              Der er altid plads
             </label>
           </div>
 
         </fieldset>
 
-        <fieldset>
 
-          <legend>
-            <h3> Hvad gør du når 5C er for overfyldt? </h3>
-          </legend>
-
-          <div class="form-group">
-            <label for="venter">
-              <input type="checkbox" id="venter" name="venter">
-              Venter på den næste afgang
-            </label>
-          </div>
-
-          <div class="form-group">
-            <label for="til_fods">
-              <input type="checkbox" id="til_fods" name="til_fods">
-              Tager turen til fods
-            </label>
-          </div>
-
-          <div class="form-group">
-            <label for="moser_ind">
-              <input type="checkbox" id="moser_ind" name="moser_ind">
-              Moser mig ind alligevel
-            </label>
-          </div>
-
-          <div class="form-group">
-            <label for="anden_mulighed">
-              <input type="checkbox" id="anden_mulighed" name="anden_mulighed">
-              Finder en anden mulighed
-            </label>
-          </div>
-
-        </fieldset>
 
         <fieldset>
           <div class="form-group">
-            <label for="beskriv"> Beskriv kort din værste oplevelse med 5c </label>
-            <textarea id="beskriv" name="beskriv_oplevelse"></textarea>
+            <label for="beskriv"> Beskriv kort din oplevelse med 5c og del den med os </label>
+
+            <textarea id="beskriv" name="beskriv_oplevelse" rows="5" cols="50"></textarea>
+            <p class="udfyld_her">Udfyld venligst her</p>
           </div>
         </fieldset>
 
 
-        <button type="submit">Send dit svar</button>
+        <button type="submit" class="btn_sendditsvar">Del dit svar med os</button>
 
       </form>
     </section>
@@ -238,12 +188,18 @@
         <p class="placeholder">Opsummering</p>
         <p> Fornavn <span class="fornavn_output"> </span></p>
         <p> Efternavn <span class="efternavn_output"> </span></p>
-        <p> Køn <span class="køn_output"> </span></p>
         <p> Alder <span class="alder_output"> </span></p>
         <p> Kendetegn <span class="kendetegn_output"> </span></p>
+        <p> Beskrivelse <span class="beskrivelse_output"></span></p>
+
       </article>
     </section>
+
+
   </main>
+
+
+
   <footer>
     <nav>
       <ul>
@@ -266,6 +222,8 @@
       </ul>
     </nav>
   </footer>
+  <script src="js/darkmode.js"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>

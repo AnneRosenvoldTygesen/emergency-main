@@ -3,7 +3,7 @@
 }
 .info-graphic,
 .info-text {
-  background-color: #85737c;
+  background-color: light-dark(#493d44, #85737c);
   padding: 20px 0;
 }
 .info-graphic {
@@ -76,6 +76,8 @@
     transform: scale(1);
   }
 } */
+
+/* ANIMATION AF HOTSPOT CIRKLEN LOVE */
 #Hotspothjerte {
   animation: heartbeat 2s ease-in-out infinite;
   transform-origin: center;
@@ -99,6 +101,7 @@
   }
 }
 
+/* ANIMATION AF HOTSPOT CIRKLEN SKRIDT */
 #Hotspotskridt {
   animation: walk 1.5s ease-in-out infinite;
 }
@@ -121,21 +124,18 @@
   }
 }
 
-#Hotspottid {
-  transform: none;
-}
-/* #Hotspottid { */
-/* animation: rotation 2s linear infinite;
+/* ANIMATION AF HOTSPOT CIRKLEN UR/TID */
+
+#test {
+  animation: rotation1 2s linear infinite;
+  transform-origin: 82.5% 50.4%;
 }
 
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
+@keyframes rotation1 {
   100% {
-    transform: rotate(360deg);
+    rotate: 360deg;
   }
-} */
+}
 /* }
 @keyframes heartbeat {
   0% {
@@ -154,3 +154,21 @@
     transform: scale(1);
   }
 } */
+
+/* H1 OG BAGGRUNDSKASSE */
+#instruction h1 {
+  color: #f7f7f2;
+  font-size: 1rem;
+  background-color: light-dark(#fdb074, #e59a67);
+}
+
+.h2_overlevelsesstrategi {
+  color: light-dark(#493d44, #f7f7f2);
+  font-family: var(--font-family-sans);
+}
+
+.p_overlevelsesstrategi {
+  color: light-dark(#493d44, #f7f7f2);
+  font-family: var(--font-family-sans);
+  width: 600px;
+}
