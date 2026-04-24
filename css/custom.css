@@ -13,7 +13,7 @@ html {
   /* Logotype */
   --color-logotype-bg: light-dark(#dbc0ad, #85737c);
   --color-text-logotype: light-dark(#b5372a, #f7f7f2);
-  --font-logotype-size: 1rem;
+  /* --font-logotype-size: 1rem; */
 
   /* Global menu */
   --color-menu-bg: light-dark(#85737c, #493d44);
@@ -24,13 +24,13 @@ html {
   --border-radius-links: 1px;
 
   /* Headlines (size)*/
-  --font-h1-size: 1rem;
+  /* --font-h1-size: 1rem;
   --font-h2-size: 0.7rem;
   --font-h3-size: 0.5rem;
 
   --headline2-size: 1rem;
   --headline3-size: 1rem;
-  --font-sub1-size: 1rem;
+  --font-sub1-size: 1rem; */
 
   /* Headlines (color) */
   --color-headline-bg: #fdb074;
@@ -41,7 +41,7 @@ html {
   --color-text-inverted: #f7f7f2;
 
   /* Andet tekst */
-  --followup-text-size: 1rem;
+  /* --followup-text-size: 1rem; */
 
   /*  Margins */
   --margin-head-bottom: 5px;
@@ -56,12 +56,12 @@ html {
   /* --color-cta-card-bg-inverted: yellow; */
 
   /* Fonts & font weights*/
-  --font-family-sans: "Elms Sans", sans-serif;
+  /* --font-family-sans: "Elms Sans", sans-serif; */
   /* --font-family-sans: ui-sans-serif; */
-  --font-weight-bold: 700;
+  /* --font-weight-bold: 700;
   --font-weight-medium: 500;
   --font-weight-regular: 300;
-  --font-weight-light: 200;
+  --font-weight-light: 200; */
 
   /* Infographics background colors*/
   /* --color-info-bg: yellow; */

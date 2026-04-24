@@ -304,20 +304,31 @@ footer ul {
   align-items: center;
 }
 
-/* STYLING AF POPOUP HISTORIE 1 KOEDMARKED */
+/* STYLING AF POPOUP HISTORIER */
 
-.popup_historie1 {
+.popup_historie1,
+.popup_historie2,
+.popup_historie3 {
   margin-top: 20px;
 }
 
-.teasertekst_koedmarked {
+.teasertekst_koedmarked,
+.teasertekst_kaoslove,
+.teasertekst_ninja {
   padding: 0;
   margin-top: 5px;
   text-align: center;
 }
 
-.popup_historie1 h3 {
+.popup_historie1 h3,
+.popup_historie2 h3,
+.popup_historie3 h3 {
   text-align: center;
+  /* padding-top: 20px; */
+  padding-inline: 10px;
+}
+.popup_historie2 h3 {
+  padding-top: 15px;
 }
 
 .popup_historie1 img {
@@ -346,22 +357,20 @@ footer ul {
 /* STYLING AF POPOUP HISTORIE 2 KAOS LOVE */
 
 .popup_historie2 {
-  margin-top: 20px;
-  height: 415px;
-  /* margin-bottom: 20px; */
+  height: 450px;
 }
 
-.popup_historie2 h3 {
+/* .popup_historie2 h3 {
   text-align: center;
   padding-top: 20px;
   padding-inline: 10px;
-}
+} */
 
-.teasertekst_kaoslove {
+/* .teasertekst_kaoslove {
   padding: 0;
   margin-top: 5px;
   text-align: center;
-}
+} */
 
 .popup_historie2 img {
   padding-top: 10px;
@@ -393,17 +402,17 @@ footer ul {
   /* margin-bottom: 20px; */
 }
 
-.popup_historie3 h3 {
+/* .popup_historie3 h3 {
   text-align: center;
-  /* padding-top: 20px; */
-  padding-inline: 10px;
-}
 
-.teasertekst_ninja {
+  padding-inline: 10px;
+} */
+
+/* .teasertekst_ninja {
   padding: 0;
   margin-top: 5px;
   text-align: center;
-}
+} */
 
 .popup_historie3 img {
   padding-top: 10px;

@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: nervous;
+  src: url(../fonts/nervous-webfont.woff);
+}
+
 img {
   width: 100%;
   height: auto;
@@ -11,7 +16,26 @@ img {
 }
 
 body {
-  font-family: var(--font-family-sans);
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h1 {
+  font-weight: 900;
+  font-family: nervous;
+  font-size: 40px;
+}
+
+h2,
+h3 {
+  font-weight: 700; /* fed */
+}
+
+p {
+  font-weight: 400; /* normal */
+  margin: 5px;
+}
+body {
+  /* font-family: var(--font-family-sans); */
   color: var(--color-text);
   background-color: var(--color-bg);
   max-width: 2560px;
@@ -41,7 +65,7 @@ main section {
   border-radius: var(--border-radius);
 }
 h1 {
-  font-size: var(--font-h1-size);
+  /* font-size: var(--font-h1-size); */
   font-weight: var(--font-weight-bold);
 
   margin: 5px 0;
@@ -198,4 +222,21 @@ footer {
 
 footer a {
   font-size: 0.7rem;
+}
+
+/* STYYLING AF LOGO I BURGER MENU ANIMATION */
+#logotype-wrapper img {
+  animation: pulse 1.5s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
