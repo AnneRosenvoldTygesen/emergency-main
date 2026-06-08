@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Videoer
+*.mp4
+*.mov
+
+# VS Code-indstillinger
+.vscode/
